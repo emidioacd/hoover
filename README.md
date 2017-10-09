@@ -82,3 +82,13 @@ We will especially consider:
 
 
 This test is based on the following gist https://gist.github.com/alirussell/9a519e07128b7eafcb50
+
+## Requirments
+- JDK 8
+- Maven 3
+
+## Compilation & Deployment
+mvn clean package & java -jar target/Hoover-1.0.0.jar
+
+## Usage
+curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{"roomSize" : [5, 5], "coords" : [1, 2], "patches" : [[1, 0],[2, 2],[2, 3]], "instructions" : "NNESEESWNWW"}' 'http://localhost:8080/hoover'
